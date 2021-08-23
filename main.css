@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+header nav a {
+    color: white;   
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: space-between;
+}
+
+.align-items {
+    align-items: center;
+}
+
+/* Main Page */
+
+.banner {
+    background-color: gray;
+    color: white;
+    font-size: 5em;
+    height: 400px;
+    text-align: center;
+}
+
+.form { /* Exercise */
+    margin-left: 10px;
+}
+
+form h3{ /* Exercise */
+    text-align: start;
+}
+
+.form form input {
+    margin: 5px 3px;
+}
+
+#email {
+    width: 310px;
+}
+
+/* Contact Page */
+.container {
+    width: 88%;
+    margin: 20px auto;
+}
+
+.error {
+    color: red;
+}

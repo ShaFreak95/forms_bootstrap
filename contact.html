@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA FEWD: Contact</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="flex justify-content align-items">
+        <div class="logo">
+            <h1>GA <span class="bolder">FEWD</span></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="flex">
+            <div class="contact-info">
+                <h3>Address:</h3>
+                <div>
+                    Lerom ipsom likau <br />>matau hali
+                </div>
+                <h3>Telephone No:</h3>
+                <div>
+                    <a 
+                    href="tel:017-2407304">017-2407304</a>
+                </div>
+                <h3>Email:</h3>
+                <div>
+                    <a href="email:hamsting95@gmail.com">hamsting95@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <!-- <form action="#" method="POST">
+                    <input /><br />
+                    <label>First Name</label>
+                    <input type="text" name="firstname" placeholder="John" /><br />
+                    <input type="number" name="number" /><br />
+                    <input type="date" name="date"><br />=
+                    <input id="password" type="password" /><br />
+                    <input type="file" />
+
+                    <h4>Gender</h4>
+                    <input type="radio" name="gender" value="male" />Male<br />
+                    <input type="radio" name="gender" value="female" />Female<br />
+                    <input type="radio" name="gender" value="other" />Other<br />
+
+                    <h4>Favourites</h4>
+                    <input
+                    type="checkbox"
+                    name="favourites"
+                    value="male"
+                    />Running<br />
+                    <input
+                    type="checkbox"
+                    name="favourites"
+                    value="female"
+                    />Climbing<br />
+                    <input
+                    type="checkbox"
+                    name="favourites"
+                    value="other"
+                    />Swimming<br />
+
+                    <select name="" id="">
+                        <option value="">Select gender</option>
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">Other</option>
+                    </select>
+
+                    <select multiple>
+                        <option>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select> <br />
+
+                    <input list="genders" type="text">
+                    <datalist id="genders">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </datalist>
+                    <br />
+                    <textarea cols="50" rows="20"></textarea>
+
+                    <button id="show_password">
+                        Show password
+                    </button>
+                    <input type="reset" />
+                    <input type="submit" value="Submit" />
+                </form> -->
+                <form>
+                    <div>
+                        <label id="label_firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="John">
+                    </div>
+                    <div>
+                        <label id="label_lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Smithey">
+                    </div>
+                    <div>
+                        <label id="label_gender">Gender</label>
+                        <input type="radio" class="gender" id="male" name="male" value="male" /> Male
+                        <input type="radio" class="gender" id="female" name="female" value="female" /> Female
+                    </div>
+                    <div>
+                        <label for="">Write your message here</label>
+                        <textarea 
+                        name="message" 
+                        id="message" 
+                        cols="30" 
+                        rows="10">
+                        </textarea>
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+<script>
+    // document.querySelector("#show_password").addEventListener("click", function(e) {
+    //     e.preventDefault()
+    //     document.querySelector("#password").setAttribute("type", "text")
+    // })
+
+    document.querySelector("#submit").addEventListener("click", function(e) {
+        e.preventDefault(); //prevent from buttom or other tags to do their default action
+        let firstname = document.querySelector("#firstname");
+        let lastname = document.querySelector("#lastname");
+        let gender = document.querySelector(".gender");
+        // alert(firstname);
+        // if (firstname.length < 2) {
+        //     document.querySelector("#label_firstname").classList.add("error")
+        // }
+
+        // let lastname = document.querySelector("#lastname");
+        // // alert(firstname);
+        // if (lastname.length < 2) {
+        //     document.querySelector("#label_lastname").classList.add("error")
+        // }
+
+        validate(firstname);
+        validate(lastname)
+        validateGender(gender)
+    });
+
+    function validate(field) {
+        // console.log(field);
+        let nameField = field.name;
+        // console.log(field.value);
+        if (field.value.length < 2 ) {
+            document.querySelector("#label_" + nameField).classList.add("error")
+        }
+    }
+    
+    function validateGender(field) {
+        console.log(field.value);
+    }
+</script>
+</body>
+</html>
